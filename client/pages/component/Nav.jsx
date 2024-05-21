@@ -1,45 +1,79 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Nav() {
   const [toggle, setToggle] = useState(false);
-  
+
   return (
-    <div className="fixed max-w-5xl mx-auto top-0 left-0 right-0 z-[100] bg-opacity-100">
-      <div className="flex max-w-5xl mx-auto items-center justify-between  lg:py-4 py-2">
-        <div>
-          <img src="/bg.png" className="w-[70px] h-[50px]" alt="logo" />
-        </div>
+    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+      <Link href="/">
+        <img src="/navLogo.png" width={50} height={30} alt="logo" />
+      </Link>
 
-        <div className="hidden xl:flex lg:flex md:flex text-white">
-          <ul className="flex flex-row items-center gap-5 list-none cursor-pointer">
-            <li className=" font-bold">Home</li>
-            <li>About Me</li>
-            <li>Works</li>
-            <li>Contact</li>
-            <li>Home</li>
-          </ul>
-        </div>
-
-        <div className="hidden xl:flex lg:flex md:flex md:px-9">
-          <button
-            type="button"
-            class="inline-flex items-center px-3 py-2 text-[10px] font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+      <ul className="hidden h-full gap-12 lg:flex text-white">
+        {["Home", "About Me", "Works", "Contact"].map((link, index) => (
+          <Link
+            href={`#${link}`}
+            key={index}
+            className="regular-16 text-white flexCenter cursor-pointer pb-1.5  transition-all hover:font-bold"
           >
-            DOWNLOAD CV
-            <span class="inline-flex items-center justify-center w-3 h-3 ms-3 text-xs font-semibold text-gray-800 rounded-full">
-              <img src="/vector.png" alt="vector" />
-            </span>
-          </button>
-        </div>
+            {link}
+          </Link>
+        ))}
+      </ul>
 
-        <div className="flex md:hidden xl:hidden lg:hidden p-5">
+      <div className="hidden lg:flex lg:items-center lg:justify-center">
+        <a
+          href="/CV.pdf"
+          target="_blank"
+        
+          className="flexCenter gap-3 px-3 py-2 text-[10px] font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+        >
+          <button type="submit" className=" whitespace-nowrap">
+            DOWNLOAD CV
+          </button>
+          <img className="w-3 h-3" src="/vector.png" alt="vector" />
+        </a>
+      </div>
+
+      <div
+        className={`${
+          toggle
+            ? "hidden"
+            : "inline-block cursor-pointer lg:hidden p-5 text-black dark:text-white"
+        }`}
+        onClick={() => setToggle(true)}
+      >
+        <svg
+          class="w-5 h-5 text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </div>
+      {toggle && (
+        <motion.div
+          whileInView={{ x: [300, 0] }}
+          transition={{ duration: 0.85, ease: "easeOut" }}
+          class="justify-between items-center w-full lg:hidden p-5"
+        >
           <svg
             class="w-5 h-5 text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 17 14"
+            onClick={() => setToggle(false)}
           >
             <path
               stroke="currentColor"
@@ -49,25 +83,20 @@ export default function Nav() {
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
-        </div>
-        {/* {toggle && (
-        <motion.div
-          whileInView={{ x: [300, 0] }}
-          transition={{ duration: 0.85, ease: "easeOut" }}
-        >
-          <HiX onClick={() => setToggle(false)} />
-          <ul>
-            {["home", "about", "work", "skills", "contact"].map((item) => (
-              <li key={item}>
-                <a href={`#${item}`} onClick={() => setToggle(false)}>
+          <ul class="flex flex-col mt-4 font-medium lg:hidden lg:mt-0">
+            {["Home", "About", "Work", "Skills", "Contact"].map((item) => (
+              <li
+                key={item}
+                class="block py-2 pr-4 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+              >
+                <Link href={`#${item}`} onClick={() => setToggle(false)}>
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </motion.div>
-      )} */}
-      </div>
-    </div>
+      )}
+    </nav>
   );
 }

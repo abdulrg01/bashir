@@ -1,45 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  background-color: #222831;
-  color: #fff;
-  box-sizing: border-box;
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.app {
-  width: 100%;
+body {
+  font-family: Inter;
+}
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.btn_white {
+  @apply border-white bg-white px-8 py-3 text-green-50;
+}
+.btn_white_text {
+  @apply border-white bg-white px-8 py-3 text-gray-90;
+}
+.btn_green {
+  @apply border-green-50 bg-green-50 px-8 py-5 text-white;
+}
+.btn_dark_green {
+  @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
+}
+.btn_dark_green_outline {
+  @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
+}
 
-  padding: 1rem 10rem;
-  background: #222831;
-  box-shadow: 0 8px 32px 0 rgba(29, 31, 67, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(38, 23, 69, 0.18);
-  position: fixed;
-  z-index: 2;
+.max-container {
+  @apply mx-auto max-w-[1200px];
+}
+
+.padding-container {
+  @apply px-6 lg:px-20 3xl:px-0;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+.flexEnd {
+  @apply flex items-center justify-end;
 }
 
 .gridD {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, 250px);
   justify-content: space-around;
-  row-gap: 30px;
-  column-gap: 13%;
+  row-gap: 2px;
+  column-gap: 1.5%;
 }
 
 .style {
   position: absolute;
-  top: 23%;
-  left: 46%;
+  translate: transform(-50%, -50%);
+  z-index: 10;
+}
+.footerStyle {
+  position: absolute;
+  translate: transform(-50%, -50%);
+  z-index: 10;
+}
+
+.style1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   translate: transform(-50%, -50%);
   z-index: 10;
 }

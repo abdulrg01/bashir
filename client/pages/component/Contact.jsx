@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_w0n9o3a", "template_vzyx1xc", form.current, {
+        publicKey: "a2XcFjDERbJ6OrvlZ",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
-    <div className="my-10 p-3">
-      <div className="max-w-[58rem] mx-auto flex flex-row gap-16 flex-wrap">
-        <div className="flex flex-col gap-10 items-center mt-24">
-          <div>
-            <h1 class="flex items-center text-4xl font-bold dark:text-white">
-              Got a project in
-              <span class="text-[#00ADB5] font-bold rounded dark:text-[#00ADB5] text-4xl me-2 px-2.5 py-0.5 ms-2">
-                {" "}
-                mind?
-              </span>
-            </h1>
-          </div>
+    <div
+      className="padding-container max-container mx-auto md:pt-5 overflow-hidden relative"
+      id="Contact"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-5">
+        <div className="flex md:items-start lg:items-start xl:items-start 2xl:items-start flex-col gap-10 mt-24 items-center">
+          <h1 class="md:text-2xl lg:text-4xl xl:text-4xl text-4xl font-bold dark:text-white">
+            Got a project in
+            <span class="text-[#00ADB5] font-bold rounded dark:text-[#00ADB5] md:text-2xl lg:text-4xl xl:text-4xl text-4xl lg:me-2 lg:px-2.5 lg:py-0.5 ms-2 mt-1">
+              <br /> mind?
+            </span>
+          </h1>
 
           <div className="flex flex-row gap-5 flex-wrap">
             <img
@@ -25,52 +45,63 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="ml-10">
+        <div>
           <div className="flex ml-14 mb-10">
             <img src="/keyboard.png" className="w-[80px]" alt="keyboard" />
           </div>
 
-          <form>
-            <div className="flex flex-row gap-3 items-center">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="name" className=" font-semibold text-[12px]">
-                  Your name
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="mb-6 grid grid-cols-2 gap-4">
+              <div class="col-span-2 sm:col-span-1">
+                <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                  {" "}
+                  Name
                 </label>
                 <input
                   type="text"
+                  name="from_name"
+                  class="block w-full rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-[#2D333B] dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  placeholder="Name"
                   required
-                  className="placeholder:text-[12px] placeholder:font-semibold rounded-lg py-2 px-3 bg-[#2D333B] dark:bg-[#2D333B] w-[200px]"
-                  placeholder="name"
                 />
               </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="email" className=" font-semibold text-[12px]">
-                  Your email
+
+              <div class="col-span-2 sm:col-span-1">
+                <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                  {" "}
+                  Email
                 </label>
                 <input
-                  type="email"
+                  type="text"
+                  name="from_email"
+                  class="block w-full rounded-lg bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500  dark:border-gray-600 dark:bg-[#2D333B] dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  placeholder="Email"
                   required
-                  className="placeholder:text-[12px] placeholder:font-semibold rounded-lg py-2 px-3 bg-[#2D333B] dark:bg-[#2D333B] w-[200px]"
-                  placeholder="email"
                 />
               </div>
             </div>
 
-            <div className="mt-4 flex flex-col gap-2">
-              <label htmlFor="email" className=" font-semibold text-[12px]">
-                Your Message
+            <div className="w-full">
+              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Your message
               </label>
               <textarea
-                name=""
-                id=""
-                rows={8}
-                placeholder="Message"
-                className=" placeholder:text-[12px] placeholder:font-semibold rounded-lg py-2 px-3 bg-[#2D333B] dark:bg-[#2D333B] w-[410px]"
-              />
+                name="message"
+                rows="8"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-[#2D333B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Leave a comment..."
+              ></textarea>
             </div>
 
-            <button className="dark:bg-[#00ADB5] bg-[#00ADB5] py-1 px-2.5 flex items-center justify-center rounded-3xl mt-3">
-              <span className="font-semibold text-[12px]"> send Message</span>
+            <button
+              type="submit"
+              value="Send"
+              className="dark:bg-[#00ADB5] bg-[#00ADB5] py-1 px-2.5 flex items-center justify-center rounded-3xl mt-3"
+            >
+              <span className="font-semibold text-[12px] text-white">
+                {" "}
+                send Message
+              </span>
               <span>
                 <img src="/send.png" className="w-4 h-4" alt="send" />
               </span>
@@ -78,7 +109,7 @@ export default function Contact() {
           </form>
 
           <div className="flex justify-end mr-10">
-            <img src="/mail.png" className="w-8 h-8"  alt="Vector" />
+            <img src="/mail.png" className="w-8 h-8" alt="Vector" />
           </div>
         </div>
       </div>
