@@ -55,11 +55,11 @@ export default function About() {
           />
         </div>
 
-        <div className="lg:hidden flex flex-col md:flex-row items-start gap-10 relative mt-64">
+        <div className="lg:hidden xl:hidden 2xl:hidden flex flex-col md:flex-row gap-10 relative mt-64">
           <img src="/AboutMee.png" className="w-[400px]" alt="about me" />
 
-          <p className="block text-sm text-gray-500 dark:text-gray-200 w-[400px]">
-            <div className="lg:w-[150px] w-[100px] h-1 bg-[#00ADB5] my-4"></div>
+          <p className=" text-base font-normal text-gray-500 dark:text-gray-200 max-w-sm">
+            <span className="lg:w-[150px] w-[100px] h-1 bg-[#00ADB5] my-4"></span>
             I’m a UI UX designer, with 3-4 years of experience collaborating
             with product managers, developers, and other stakeholders to create
             user interface designs that enhance the usability and accessibility
