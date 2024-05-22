@@ -1,9 +1,6 @@
-import {
-  SlSocialTwitter,
-  SlSocialInstagram,
-  SlSocialLinkedin,
-} from "react-icons/sl";
+import { SlSocialInstagram, SlSocialLinkedin } from "react-icons/sl";
 import { TbBrandDiscord } from "react-icons/tb";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -29,7 +26,7 @@ export default function Footer() {
               </a>
               <a href="https://x.com/BashirI74692251" target="_blank">
                 <span className="w-6 h-6 lg:w-8 lg:h-8 md:w-8 md:h-8 xl:w-8 xl:h-8 2xl:w-8 2xl:h-8 text-xl bg-slate-600 dark:bg-[#2D333B] text-slate-100 dark:text-slate-100  rounded-full inline-flex items-center justify-center hover:text-gray-100 cursor-pointer hover:translate-y-2 transition-all duration-300">
-                  <SlSocialTwitter className="w-3 h-3" />
+                  <FaXTwitter className="w-3 h-3" />
                 </span>
               </a>
               <a
@@ -49,7 +46,7 @@ export default function Footer() {
         <div>
           <h1>
             Send me a message or connect on{" "}
-            <span className="dark:text-[#088B94] cursor-pointer">Linkedin</span>{" "}
+            <a href="https://www.linkedin.com/in/bashondesign/" target="_blank" className="dark:text-[#088B94] cursor-pointer">Linkedin</a>{" "}
             and let’s discuss how I can help you.
           </h1>
         </div>

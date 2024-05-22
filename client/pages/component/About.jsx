@@ -7,7 +7,7 @@ export default function About() {
     <section className="relative" id="About Me">
       <div className="dark:bg-[#1D222A]">
         <div className="max-container mx-auto padding-container py-10 lg:mb-10  lg:py-20 xl:mb-20">
-          <div className="relative flex items-center justify-center mb-10 xl-top-24 lg:-top-24 2xl:-top-24">
+          <div className="relative flex items-center justify-center mb-10 xl-top-24 lg:-top-24 2xl:-top-24 -top-16">
             <h1 className="style text-4xl font-extrabold dark:text-white">
               What I Do
             </h1>
@@ -27,7 +27,7 @@ export default function About() {
             <ExperienceCard img="/group3.png" title="Logo Design" />
           </motion.div>
 
-          <div className="relative flex items-center justify-center top-14 xl:-bottom-24 lg:-bottom-24 2xl:-bottom-24">
+          <div className="relative flex items-center justify-center top-14 xl:top-24 lg:top-24 md:top-24 2xl:-bottom-24">
             <h1 className="style text-4xl font-extrabold dark:text-white">
               About Me
             </h1>

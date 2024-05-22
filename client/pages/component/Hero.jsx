@@ -1,30 +1,17 @@
-import {
-  SlSocialTwitter,
-  SlSocialInstagram,
-  SlSocialLinkedin,
-} from "react-icons/sl";
+import { SlSocialInstagram, SlSocialLinkedin } from "react-icons/sl";
+import { FaXTwitter } from "react-icons/fa6";
 
 import { TbBrandDiscord } from "react-icons/tb";
 import { motion } from "framer-motion";
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-    },
-  },
-};
 
 export default function Hero() {
   return (
     <section
-      className="w-full relative bg-center bg-no-repeat bg-[url('/heroBg.svg')] bg-blend-multiply"
+      className="w-full relative bg-center bg-no-repeat bg-[url('/heroBg.svg')] bg-blend-multiply overflow-hidden"
       id="Hero"
     >
-      <div className="padding-container max-container mx-auto md:pt-5">
+      <div className="padding-container max-container mx-auto md:pt-5 pb-5">
         <div class="sm:flex sm:items-center sm:justify-between">
           <motion.div
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -78,7 +65,7 @@ export default function Hero() {
               </a>
               <a href="https://x.com/BashirI74692251" target="_blank">
                 <span className="w-8 h-8 text-xl bg-slate-600 dark:bg-slate-700 text-slate-100 dark:text-slate-100  rounded-full inline-flex items-center justify-center hover:text-gray-100 cursor-pointer hover:translate-y-2 transition-all duration-300">
-                  <SlSocialTwitter className="w-4 h-4" />
+                  <FaXTwitter className="w-4 h-4" />
                 </span>
               </a>
               <a
@@ -94,27 +81,25 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-      >
+      <div className="w-screen mt-3 overflow-hidden absolute xl:top-40 md:top-52 lg:top-40 sm:top-44 top-72">
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          src="/shapeImg.svg"
+          src="/shapeImg.png"
           alt="shape"
+          className="w-full"
         />
+      </div>
 
-        <div className="w-full max-container padding-container mx-auto lg:-mt-24">
-          <span class="block text-sm text-gray-500 dark:text-gray-400 w-[350px]">
-            <p className="text-gray-400 font-semibold">"I always Say"</p>
-            <p className="font-medium">
-              Let’s work together 🤝🏾 to create a seamless user experience
-              using tools 👨🏾‍💻 such as Figma/FigJam, Miro, and Adobe XD.
-            </p>
-          </span>
-        </div>
-      </motion.div>
+      <div className="w-full max-container padding-container mx-auto pb-32 deo:pb-14 lg:mt-64 md:mt-64 xl:mt-64 sm:mt-52 mt-48 deo:mt-52">
+        <span class="block text-sm text-gray-500 dark:text-gray-400 w-[350px]">
+          <p className="font-semibold">"I always Say"</p>
+          <p className="font-medium text-gray-500 dark:text-gray-200">
+            Let’s work together 🤝🏾 to create a seamless user experience using
+            tools 👨🏾‍💻 such as Figma/FigJam, Miro, and Adobe XD.
+          </p>
+        </span>
+      </div>
     </section>
   );
 }

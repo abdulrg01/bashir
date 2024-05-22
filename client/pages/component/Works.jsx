@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export default function Works() {
   return (
     <div
-      className="dark:bg-[#1D222A] bg-[#1D222A] overflow-hidden relative py-20"
+      className="dark:bg-[#1D222A] bg-[#1D222A] overflow-hidden relative pt-16 z-50"
       id="Works"
     >
-      <div className="relative flex items-center justify-center z-30 lg:-top-24">
+      <div className="relative flex items-center justify-center -top-16 bg-[#222831]">
         <h1 className="style text-3xl font-extrabold dark:text-white">
           Recent Works
         </h1>
@@ -30,9 +30,75 @@ export default function Works() {
               ease: "easeInOut",
               staggerChildren: 0.5,
             }}
+            src="/Group33.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+            src="/Group34.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+            src="/Group35.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+            src="/Group36.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+            src="/Group37.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+            src="/Group38.png"
+            alt="works"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
+          />
+          <img
+            whileHover={{ opacity: [0, 1] }}
+            transition={{
+              duration: 0.25,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
             src="/frame.png"
             alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
           />
           <img
             whileHover={{ opacity: [0, 1] }}
@@ -43,7 +109,7 @@ export default function Works() {
             }}
             src="/group10.png"
             alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
           />
           <img
             whileHover={{ opacity: [0, 1] }}
@@ -54,73 +120,7 @@ export default function Works() {
             }}
             src="/group11.png"
             alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/frame.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/group10.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/group11.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/frame.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/group10.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
-          />
-          <img
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
-            src="/group11.png"
-            alt="works"
-            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl p-6"
+            className="w-52 h-[140px] bg-[#2A3038] dark:bg-[#2A3038] rounded-xl px-6 py-2"
           />
         </motion.div>
       </div>

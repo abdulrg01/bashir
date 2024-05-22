@@ -25,9 +25,8 @@ export default function Nav() {
 
       <div className="hidden lg:flex lg:items-center lg:justify-center">
         <a
-          href="/CV.pdf"
+          href="https://firebasestorage.googleapis.com/v0/b/contactme-2970e.appspot.com/o/Bashir's%20Resume.pdf?alt=media&token=21a8e337-51c6-40b7-91a1-b0aece7756bf"
           target="_blank"
-        
           className="flexCenter gap-3 px-3 py-2 text-[10px] font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
         >
           <button type="submit" className=" whitespace-nowrap">
@@ -84,7 +83,7 @@ export default function Nav() {
             />
           </svg>
           <ul class="flex flex-col mt-4 font-medium lg:hidden lg:mt-0">
-            {["Home", "About", "Work", "Skills", "Contact"].map((item) => (
+            {["Home", "About Me", "Works", "Skills", "Contact"].map((item) => (
               <li
                 key={item}
                 class="block py-2 pr-4 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
