@@ -39,7 +39,7 @@ export default function Hero() {
           </motion.div>
 
           {/*  */}
-          <div className="lg:flex md:flex xl:flex flex-col items-center gap-6 dark:text-gray-900 text-gray-300 hidden lg:-mr-5 xl:-mr-5">
+          <div className="lg:flex md:flex xl:flex flex-col items-center gap-6 dark:text-gray-900 text-gray-300 hidden lg:-mr-5 xl:-mr-5 relative z-[99999]">
             <p className="text-sm rotate-90 tracking-wide text-black dark:text-white my-3 whitespace-nowrap">
               Follow Me
             </p>
