@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { TbDownload } from "react-icons/tb";
 
 export default function Nav() {
   const [toggle, setToggle] = useState(false);
@@ -32,7 +33,7 @@ export default function Nav() {
           <button type="submit" className=" whitespace-nowrap">
             DOWNLOAD CV
           </button>
-          <img className="w-3 h-3" src="/vector.png" alt="vector" />
+          <TbDownload className=" h-4 w-4" />
         </a>
       </div>
 
