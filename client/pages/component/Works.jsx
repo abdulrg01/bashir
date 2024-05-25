@@ -21,7 +21,6 @@ export default function Works() {
         <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          // className="grid grid-cols-2 lg:grid-cols-3 gap-5 custom-scrollbar overflow-y-scroll h-[23rem] w-full"
           className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 custom-scrollbar overflow-y-scroll h-[23rem] w-full"
         >
           <div className="rounded-xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] px-3 flex items-center justify-center">
@@ -150,7 +149,7 @@ export default function Works() {
                 ease: "easeInOut",
                 staggerChildren: 0.5,
               }}
-              src="/group39.png"
+              src="/Group39.png"
               alt="works"
               className="rounded-xl w-full h-full"
             />
@@ -163,7 +162,7 @@ export default function Works() {
                 ease: "easeInOut",
                 staggerChildren: 0.5,
               }}
-              src="/group40.png"
+              src="/Group40.png"
               alt="works"
               className="rounded-xl w-full h-full"
             />
@@ -176,7 +175,7 @@ export default function Works() {
                 ease: "easeInOut",
                 staggerChildren: 0.5,
               }}
-              src="/group41.png"
+              src="/Group41.png"
               alt="works"
               className="rounded-xl w-full h-full"
             />
