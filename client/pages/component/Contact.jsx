@@ -1,24 +1,36 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_w0n9o3a", "template_vzyx1xc", form.current, {
-        publicKey: "a2XcFjDERbJ6OrvlZ",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    const serviceId = "service_w0n9o3a";
+    const templateId = "template_vzyx1xc";
+    const publicKey = "a2XcFjDERbJ6OrvlZ";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "bashondesign",
+      message: message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response);
+        setName("");
+        setEmail("");
+        setMessage("");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
   };
 
   return (
@@ -50,16 +62,21 @@ export default function Contact() {
             <img src="/keyboard.png" className="w-[80px]" alt="keyboard" />
           </div>
 
-          <form ref={form} onSubmit={sendEmail}>
+          <form onSubmit={sendEmail}>
             <div className="mb-6 grid grid-cols-2 gap-4">
               <div class="col-span-2 sm:col-span-1">
-                <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                <label
+                  class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="name"
+                >
                   {" "}
                   Name
                 </label>
                 <input
                   type="text"
-                  name="from_name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   class="block w-full rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-[#2D333B] dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                   placeholder="Name"
                   required
@@ -67,13 +84,18 @@ export default function Contact() {
               </div>
 
               <div class="col-span-2 sm:col-span-1">
-                <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                <label
+                  class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="email"
+                >
                   {" "}
                   Email
                 </label>
                 <input
                   type="text"
-                  name="from_email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   class="block w-full rounded-lg bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500  dark:border-gray-600 dark:bg-[#2D333B] dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                   placeholder="Email"
                   required
@@ -82,12 +104,17 @@ export default function Contact() {
             </div>
 
             <div className="w-full">
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                htmlFor="message"
+              >
                 Your message
               </label>
               <textarea
                 name="message"
                 rows="8"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-[#2D333B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Leave a comment..."
               ></textarea>
