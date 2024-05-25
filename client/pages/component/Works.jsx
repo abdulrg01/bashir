@@ -23,7 +23,7 @@ export default function Works() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 custom-scrollbar overflow-y-scroll h-[23rem] w-full"
         >
-          <div className="rounded-xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] px-3 flex items-center justify-center">
+          <div className="rounded-xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -37,7 +37,7 @@ export default function Works() {
             />
           </div>
 
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -50,7 +50,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] px-3 py-1 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 py-1 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -63,7 +63,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -76,7 +76,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] px-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 py-2 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -84,12 +84,12 @@ export default function Works() {
                 ease: "easeInOut",
                 staggerChildren: 0.5,
               }}
-              src="/Group37.png"
+              src="/inPrgress.png"
               alt="works"
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -102,7 +102,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] px-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -115,7 +115,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -128,7 +128,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -141,7 +141,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -154,7 +154,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -167,7 +167,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-52 h-[160px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
