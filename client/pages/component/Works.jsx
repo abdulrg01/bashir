@@ -17,13 +17,14 @@ export default function Works() {
       </div>
 
       {/* cards */}
-      <div className="padding-container max-container mx-auto">
+      <div className="pl-6 lg:px-20 3xl:px-0 max-container mx-auto">
         <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 custom-scrollbar overflow-y-scroll h-[23rem] w-full"
+          className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 custom-scrollbar overflow-y-scroll h-[23rem] pr-5 group"
         >
-          <div className="rounded-xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 flex items-center justify-center">
+          {/* Each div width of w-72 */}
+          <div className="rounded-xl bg-[#2A3038] dark:bg-[#2A3038] h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 px-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -36,8 +37,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -50,7 +50,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 py-1 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 px-3 py-1">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -63,7 +63,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -76,7 +76,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 py-2 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 px-3 py-2">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -89,7 +89,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -102,7 +102,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] px-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 px-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -115,7 +115,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -128,7 +128,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -141,7 +141,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -154,7 +154,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
@@ -167,7 +167,7 @@ export default function Works() {
               className="rounded-xl w-full h-full"
             />
           </div>
-          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038] w-72 h-[200px] p-3 flex items-center justify-center">
+          <div className="rounded-2xl bg-[#2A3038] dark:bg-[#2A3038]  h-[200px] group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500 p-3">
             <img
               whileHover={{ opacity: [0, 1] }}
               transition={{
