@@ -19,7 +19,7 @@ export default function About() {
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5, type: "tween" }}
-            className="grid lg:grid-cols-4 grid-cols-2 gap-9"
+            className="grid lg:grid-cols-4 grid-cols-2 gap-9 group"
           >
             <ExperienceCard img="/Group1.png" title="Product Design" />
             <ExperienceCard img="/UX.png" title="UI/UX Design" />
